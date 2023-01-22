@@ -1,12 +1,12 @@
 # io
 
-io端口是用于访问外部设备的主要方法。
+IO port is the main way to access external device.
 
-在机器中，使用`in`和`out`指令访问`0`~`63`共64个端口。
+In CPU, it use `in` and `out` instruction to access port `0` to `63` (totally 64 ports).
 
-## 固定端口
+## Stable ports
 
-端口号|用途|说明
+port|using|explanation
 :-:|:-|:-
-0   |中断后端口     |当CPU发生IR_DEVICE中断后，立即访问此端口可获得设备连接的端口
-1   |多处理器唤醒   |只能写入一个字节，是核心的id；可以通过cpuid指令获取系统中共有多少个核心
+0   |Post interrupt        |Read this port after IR_DEVICES occured.
+1   |Multi-processor wakeup |Write 1-byte integer `n`, and `core#n` will start.

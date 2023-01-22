@@ -1,6 +1,6 @@
-# 指令集
+# Instruction Set
 
-## 基本指令集
+## Basic Instruction Set
 
 Basic instruction set ('instruct set' will be aliases by 'ins' after time) occupies opcode `0` to `63`,
 which gives managing instructions, the most basic arithmetic and logic options and memory r/w instructions.
