@@ -49,8 +49,7 @@ code|instruction form|encode|name|explanation
 29*     |livt r              |1d r[8]                               |load interrupt vector table
 30*     |lkpt r              |1e r[8]                               |load kernel mode paging table
 31*     |lupt r              |1f r[8]                               |load user mode paging table
-32*     |lsrg r1,r2          |20 r1[4],r2[4]                        |load from srg
-33*     |ssrg r1,r2          |21 r1[4],r2[4]                        |store to srg
+32,33   |                    |                                      |reserved
 34      |initext r           |22 r[8]                               |initialize extension|r is instruction set code
 35      |destext             |23                                    |destory extension
 36*     |in imm/r1,r2        |24 r2[4],mvflg[4] imm[8]/r1[4]        |input from io port|imm/r1 for port code, input one byte to r2
@@ -143,7 +142,6 @@ parameter register|x0   |x1    |returned result
   * ^8 priority flag(0 for kernel and 1 for user mode)
   * ^9 higher flag
   * ^10 lower flag
-* stack registers group(srg): Can be used on stack options.
 * interrupt vector table register(ivt): points to the first address of ivt.
   (See [Interrupt](interrupt.md).)
 * kernel/user mode page table register(k/upt): (See [Paging](#paging).)
