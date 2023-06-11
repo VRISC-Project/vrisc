@@ -76,14 +76,14 @@
 52*     |livt r              |34 r[8]                               |加载中断向量表
 53*     |lkpt r              |35 r[8]                               |加载内核态页表
 54*     |lupt r              |36 r[8]                               |加载用户态页表
-55      |lipdump r           |37 r[8]                               |将ipdump加载到寄存器中
-56      |lflgdump r          |38 r[8]                               |将flgdump加载到寄存器中
-57      |sipdump r           |39 r[8]                               |将寄存器的值写入ipdump
-58      |sflgdump r          |3a r[8]                               |将寄存器的值写入flgdump
-59      |cpuid               |3b                                    |获取处理器信息和一些硬件信息|详见[cpuid](#cpuid)一节
-60*     |initext r           |3c r[8]                               |初始化扩展指令集    |r为指令集代码
-61*     |destext             |3d                                    |销毁扩展指令集
-62      |                    |3e                                    |
+55*     |lscp r              |37 r[8]                               |加载系统调用指针
+55      |lipdump r           |38 r[8]                               |将ipdump加载到寄存器中
+57      |lflagdump r         |39 r[8]                               |将flgdump加载到寄存器中
+58      |sipdump r           |3a r[8]                               |将寄存器的值写入ipdump
+59      |sflagdump r         |3a r[8]                               |将寄存器的值写入flgdump
+60      |cpuid               |3c                                    |获取处理器信息和一些硬件信息|详见[cpuid](#cpuid)一节
+61*     |initext r           |3d r[8]                               |初始化扩展指令集    |r为指令集代码
+62*     |destext             |3e                                    |销毁扩展指令集
 63      |                    |3f                                    |
 
 * 条件指令名:
@@ -174,7 +174,7 @@ cpuid指令可获得处理器的硬件信息。（或者一些特殊功能）
 * 内核态/用户态页表指针寄存器：分页机制相关寄存器（见[分页机制](#分页机制)）
 * 系统调用指针寄存器
 * ipdump寄存器：在发生跳转或中断时，跳转前的ip将被转存至此
-* flgdump寄存器：在发生中断时，跳转前的ip将被转存至此
+* flagdump寄存器：在发生中断时，跳转前的ip将被转存至此
 
 ## 分页机制
 
