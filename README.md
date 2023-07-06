@@ -12,14 +12,8 @@ A 64-bit virtual CPU architecture.
 
 ## [指令集](doc/instset.md)
 
-[English edition](doc.en/instset.md)
-
 ## [中断机制](doc/interrupt.md)
 
-[English edition](doc.en/interrupt.md)
-
 ## [输入输出](doc/io.md)
-
-[English edition](doc.en/io.md)
 
 ## 开发事项（Development Items）
